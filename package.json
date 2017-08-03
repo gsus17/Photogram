@@ -1,0 +1,25 @@
+{
+  "name": "photogram",
+  "version": "0.1.0",
+  "description": "Proyecto de prueba aplicando todos los conceptos de javascript.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsus17/Photogram.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Suarez Jesus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsus17/Photogram/issues"
+  },
+  "homepage": "https://github.com/gsus17/Photogram#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
