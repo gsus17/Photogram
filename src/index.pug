@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    title Photogram
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Oleo+Script', rel='stylesheet')
+    link(rel='stylesheet', href='assets/css/app.css')
+  body
+    section#main-container
+      .container
+        .row
+          .col.s10.push-s1
+            .row
+              .col.m5.hide-on-small-only
+                img.iphone(src='assets/img/iphone.png')
+              .col.s12.m7
+                .row
+                  .signup-box
+                    h1.photogram Photogram
+                    form.signup-form
+                      h2 Registrate para ver fotos de tus amigos.
+                      .section
+                        a.btn.btn-fb.hide-on-small-only Iniciar sesion con facebook
+                        a.btn.btn-fb.hide-on-med-and-up Iniciar sesion
+                      .divider
+                      .section
+                        input(type='email', name='email', placeholder='Correo electronico')
+                        input(type='text', name='nombre', placeholder='Nombre completo')
+                        input(type='text', name='Username', placeholder='Nombre de usuario')
+                        input(type='text', name='Contraseña', placeholder='Password')
+                        button.btn.waves-effect.waves-light.btn-signup(type='submit') Registrate
+                .row
+                  .login-box
+                    | ¿Tienes una cuenta? 
+                    a(href='/signin') Entrar
+    footer.site-footer
+      .container
+        .row
+          .col.s12.l3.center-align
+            // Dropdown Trigger
+            a.dropdown-button.btn.btn-flat(href='#', data-activates='dropdown1') Idioma
+            // Dropdown Structure
+            ul#dropdown1.dropdown-content
+              li
+                a(href='#!') Español
+              li
+                a(href='#!') Ingles
+          .col.s12.l3.push-l6.center-align
+            | © 2016 Photogram
+    script(src='http://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js')

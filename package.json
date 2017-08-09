@@ -21,7 +21,8 @@
   "homepage": "https://github.com/gsus17/Photogram#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "materialize-css": "^0.100.1"
+    "materialize-css": "^0.100.1",
+    "pug": "^2.0.0-rc.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
