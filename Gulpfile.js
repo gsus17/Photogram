@@ -24,6 +24,16 @@ gulp.task('imgs', function (done) {
     gulp.src(['src/assets/img/*.jpg', 'src/assets/img/*.png'])
         .pipe(gulp.dest('www/assets/img/'))
 })
+// Tarea encargada de posicionar todas las imagenes.
+gulp.task('favicon', function (done) {
+    gulp.src([
+        'src/assets/img/favicon/*.jpg',
+        'src/assets/img/favicon/*.png',
+        'src/assets/img/favicon/*.ico',
+        'src/assets/img/favicon/*.json',
+        'src/assets/img/favicon/*.xml'])
+        .pipe(gulp.dest('www/assets/img/favicon'))
+})
 
 // Orden de ejecucion de las tareas
-gulp.task('default', ['index', 'styles', 'imgs']);
+gulp.task('default', ['index', 'styles', 'imgs', 'favicon']);

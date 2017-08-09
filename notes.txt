@@ -1,0 +1,2 @@
+* Convertir a pug http://html2jade.org/
+* Crear favicon http://www.favicon-generator.org/
