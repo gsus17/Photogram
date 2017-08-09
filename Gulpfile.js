@@ -2,6 +2,17 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var gulpRename = require('gulp-rename')
+var typescript = require('gulp-typescript');
+var tsProject = typescript.createProject('tsconfig.json', {
+    typescript: require('typescript')
+});
+
+// Compila los archivos ts a js.
+gulp.task("compiler", function () {
+    return tsProject.src()
+        .pipe(tsProject())
+        .pipe(gulp.dest("www/"));
+});
 
 // Tarea encargada de posicionar el archivo index.pug.
 gulp.task('index', function () {
@@ -36,4 +47,4 @@ gulp.task('favicon', function (done) {
 })
 
 // Orden de ejecucion de las tareas
-gulp.task('default', ['index', 'styles', 'imgs', 'favicon']);
+gulp.task('default', ['compiler', 'index', 'styles', 'imgs', 'favicon']);
