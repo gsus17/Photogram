@@ -1,0 +1,2 @@
+
+System.import('index.js')

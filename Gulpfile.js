@@ -22,6 +22,17 @@ gulp.task('imgs', function (done) {
     gulp.src(['src/assets/img/*.jpg', 'src/assets/img/*.png'])
         .pipe(gulp.dest('www/assets/img/'))
 })
+
+gulp.task('system', function (done) {
+    gulp.src(['node_modules/systemjs/dist/system.js'])
+        .pipe(gulp.dest('www/vendor/systemjs/'))
+})
+
+gulp.task('page', function (done) {
+    gulp.src(['node_modules/page/page.js'])
+        .pipe(gulp.dest('www/vendor/page/'))
+})
+
 // Tarea encargada de posicionar todas las imagenes.
 gulp.task('favicon', function (done) {
     gulp.src([
@@ -114,4 +125,4 @@ gulp.task('scripts-debug', ['annotate-scripts'], function () {
 });
 
 // Orden de ejecucion de las tareas
-gulp.task('default', ['sass', 'scripts-debug', 'scripts-js', 'views-debug', 'favicon', 'imgs', 'index']);
+gulp.task('default', ['sass', 'scripts-debug', 'scripts-js', 'views-debug', 'system', 'page', 'favicon', 'imgs', 'index']);
