@@ -33,6 +33,26 @@ gulp.task('page', function (done) {
         .pipe(gulp.dest('www/vendor/page/'))
 })
 
+gulp.task('vue', function (done) {
+    gulp.src(['node_modules/vue/dist/vue.js'])
+        .pipe(gulp.dest('www/vendor/vue/'))
+})
+
+gulp.task('vue-router', function (done) {
+    gulp.src(['node_modules/vue-router/dist/vue-router.min.js'])
+        .pipe(gulp.dest('www/vendor/vue-router/'))
+})
+
+gulp.task('jquery', function (done) {
+    gulp.src(['node_modules/jquery/dist/jquery.js'])
+        .pipe(gulp.dest('www/vendor/jquery/'))
+})
+
+gulp.task('materialize', function (done) {
+    gulp.src(['node_modules/materialize-css/dist/js/materialize.js','node_modules/materialize-css/dist/css/materialize.css'])
+        .pipe(gulp.dest('www/vendor/materialize/'))
+})
+
 // Tarea encargada de posicionar todas las imagenes.
 gulp.task('favicon', function (done) {
     gulp.src([
@@ -125,4 +145,17 @@ gulp.task('scripts-debug', ['annotate-scripts'], function () {
 });
 
 // Orden de ejecucion de las tareas
-gulp.task('default', ['sass', 'scripts-debug', 'scripts-js', 'views-debug', 'system', 'page', 'favicon', 'imgs', 'index']);
+gulp.task('default', [
+    'sass',
+    'scripts-debug',
+    'scripts-js',
+    'views-debug',
+    'system',
+    'page',
+    'vue',
+    'vue-router',
+    'jquery',
+    'materialize',
+    'favicon',
+    'imgs',
+    'index']);

@@ -1,2 +1,2 @@
 
-System.import('index.js')
+System.import('init.js')

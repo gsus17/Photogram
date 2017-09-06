@@ -20,19 +20,21 @@
   },
   "homepage": "https://github.com/gsus17/Photogram#readme",
   "dependencies": {
-    "express": "^4.15.3",
-    "gulp-changed": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
+
     "gulp-typescript": "^3.2.1",
-    "materialize-css": "^0.100.1",
-    "page": "^1.7.1",
-    "pug": "^2.0.0-rc.3",
+    "jquery": "^3.2.1",
+    "live-server": "^1.2.0",
+    "materialize-css": "^0.100.2",
     "systemjs": "^0.20.18",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.2",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-changed": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
   }
 }

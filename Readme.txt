@@ -6,5 +6,4 @@
 // Ejecucion
 
 * gulp
-* node server.js
-* Open http://localhost:3000
+* Ubicarse en /www y ejecutar live-server.
